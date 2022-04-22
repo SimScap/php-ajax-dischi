@@ -2,3 +2,14 @@ header{
     height: 60px;
     background-color: black;
 }
+.card{
+    height: 100%;
+}
+.card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+body{
+    background-color: rgb(30, 45, 59);
+}
