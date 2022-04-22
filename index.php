@@ -8,6 +8,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -16,28 +18,23 @@
     <?php include_once __DIR__ . '/partials/header.php'; ?>
     <main class="container-fluid p-3">
     <div class="row row-cols-2 row-cols-md-5 g-4 text-center">  
-        <?php foreach($music as $data) { ?>
-        <div class="col">
+        <div class="col" v-for="data in music">
             <div class="card " style="height: 100%;">
-                <img src="<?= $data['poster'];?>" class="card-img-top" alt="<?= $data['title'];?>">
+                <img :src="data.poster" class="card-img-top" :alt="data.title">
                 <div class="card-body">
-                    <h5 class="card-title"><?php echo $data['title']; ?></h5>
-                    <p class="card-text"><?php echo $data['author']; ?></p>
-                    <p class="card-text"><?php echo $data['genre']; ?></p>
-                    <p class="card-text"><?php echo $data['year']; ?></p>
+                    <h5 class="card-title">{{data.title}}</h5>
+                    <p class="card-text">{{data.author}}</p>
+                    <p class="card-text">{{data.genre}}</p>
+                    <p class="card-text">{{data.year}}</p>
                 </div>
             </div>
         </div>
-        <?php } ?>
     </div>
     </main>
     </div>
- 
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
-
 <?php 
 /**
  * 

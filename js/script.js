@@ -5,7 +5,7 @@ const app = new Vue(
             music : []
         },
         created() {
-            axios.get('').then(
+            axios.get('http://localhost/php-ajax-dischi/server/controller.php').then(
                 (result) => {
                     this.music = result.data.results;
                 }).catch((error) => {
