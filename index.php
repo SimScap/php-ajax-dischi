@@ -12,7 +12,13 @@
 </head>
 <body>
     <?php include_once __DIR__ . '/partials/header.php'; ?>
-    <img src="<?= $logo;?>" alt="logo">
+    <header class="container-fluid d-flex p-2">
+        <div class="row">
+            <div class="col-4">
+            <img src="<?= $logo;?>" alt="logo" class="img-fluid">
+            </div>
+        </div>
+    </header>
     
 </body>
 </html>
