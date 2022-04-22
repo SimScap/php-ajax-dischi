@@ -13,3 +13,27 @@
         </div>
     </div>
 </main>
+<?php 
+/**
+ * 
+ * 
+ * <div class="row row-cols-2 row-cols-md-5 g-4 text-center">
+        <?php foreach($music as $data) { ?>
+        <div class="col">
+            <div class="card " style="height: 100%;">
+                <img src="<?= $data['poster'];?>" class="card-img-top" alt="<?= $data['title'];?>">
+                <div class="card-body">
+                    <h5 class="card-title"><?php echo $data['title']; ?></h5>
+                    <p class="card-text"><?php echo $data['author']; ?></p>
+                    <p class="card-text"><?php echo $data['genre']; ?></p>
+                    <p class="card-text"><?php echo $data['year']; ?></p>
+                </div>
+            </div>
+        </div>
+        <?php } ?>
+    </div>
+ * 
+ * 
+ */
+
+?>
