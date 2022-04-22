@@ -11,8 +11,8 @@
     <title>Document</title>
 </head>
 <body>
-    <?php include_once __DIR__ . '/partials/header.php'; ?>
-    <header class="container-fluid d-flex p-2">
+    <?php include_once __DIR__ . '/server/data.php'; ?>
+    <header class="container-fluid d-flex p-1">
         <div class="row">
             <div class="col-4">
             <img src="<?= $logo;?>" alt="logo" class="img-fluid">
